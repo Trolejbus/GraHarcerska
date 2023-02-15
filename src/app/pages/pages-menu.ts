@@ -10,6 +10,16 @@ export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'Baza obywateli',
     icon: 'people-outline',
-    link: '/pages/layout/stepper',
+    link: '/pages/tables/smart-table',
+  },
+  {
+    title: 'Odciski palców',
+    icon: 'radio-button-on-outline',
+    link: '/pages/fingerprints'
+  },
+  {
+    title: 'Namierzanie numerów',
+    icon: 'phone-call-outline',
+    link: '/pages/phones'
   },
 ];

@@ -25,7 +25,7 @@ const routes: Routes = [{
       component: InfiniteListComponent,
     },
     {
-      path: 'accordion',
+      path: 'accordion/:id',
       component: AccordionComponent,
     },
     {

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { LocalDataSource } from 'ng2-smart-table';
 
 import { SmartTableData } from '../../../@core/data/smart-table';
@@ -11,60 +12,45 @@ import { SmartTableData } from '../../../@core/data/smart-table';
 export class SmartTableComponent {
 
   settings = {
-    add: {
-      addButtonContent: '<i class="nb-plus"></i>',
-      createButtonContent: '<i class="nb-checkmark"></i>',
-      cancelButtonContent: '<i class="nb-close"></i>',
-    },
-    edit: {
-      editButtonContent: '<i class="nb-edit"></i>',
-      saveButtonContent: '<i class="nb-checkmark"></i>',
-      cancelButtonContent: '<i class="nb-close"></i>',
-    },
-    delete: {
-      deleteButtonContent: '<i class="nb-trash"></i>',
-      confirmDelete: true,
+    actions: {
+      add: false,
+      delete: false,
+      edit: false,
     },
     columns: {
-      id: {
-        title: 'ID',
-        type: 'number',
-      },
       firstName: {
-        title: 'First Name',
+        title: 'Imie',
         type: 'string',
       },
       lastName: {
-        title: 'Last Name',
+        title: 'Nazwisko',
         type: 'string',
       },
-      username: {
-        title: 'Username',
-        type: 'string',
+      ssn: {
+        title: 'Numer ubezpieczenia',
+        type: 'string'
       },
-      email: {
-        title: 'E-mail',
+      city: {
+        title: 'Miasto',
         type: 'string',
+        filter: false
       },
-      age: {
-        title: 'Age',
-        type: 'number',
+      phone: {
+        title: 'Numer telefonu',
+        type: 'string',
       },
     },
   };
 
   source: LocalDataSource = new LocalDataSource();
 
-  constructor(private service: SmartTableData) {
+  constructor(private service: SmartTableData, private router: Router) {
     const data = this.service.getData();
     this.source.load(data);
   }
 
-  onDeleteConfirm(event): void {
-    if (window.confirm('Are you sure you want to delete?')) {
-      event.confirm.resolve();
-    } else {
-      event.confirm.reject();
-    }
+  rowSelected(event): void {
+    console.log(event);
+    this.router.navigate([`pages/layout/accordion/${event.data.id}`])
   }
 }
