@@ -1091,7 +1091,7 @@ export class SmartTableService extends SmartTableData {
     "address": "Apt 1194",
     "city": "Shanhou",
     "birthdate": "1950-08-06",
-    "phone": "505 764 615",
+    "phone": "505-764-615",
     "ssn": "814-03-5088",
     "photo": "nick3.png",
     "print": "p5"
@@ -1118,7 +1118,7 @@ export class SmartTableService extends SmartTableData {
     "address": "Ośrodek Totustus Sala nr 5",
     "city": "Arkham",
     "birthdate": "1970-03-14",
-    "phone": "883 203 598",
+    "phone": "883-203-598",
     "ssn": "123-03-5083",
     "photo": "nick5.png",
     "info": "1992 - 2000 - Udział w zorganizowanej organizacji przestępczej. 2000 - proces zakończony skazaniem na 5 lat więzienia z 5 letnim okresem warunkowym."
@@ -1131,7 +1131,7 @@ export class SmartTableService extends SmartTableData {
     "address": "Apt 1194",
     "city": "Shanhou",
     "birthdate": "1924-05-15",
-    "phone": "539 922 404",
+    "phone": "539-922-404",
     "ssn": "143-03-5083",
     "print": "p1",
     "photo": "nick6.png",
@@ -1171,7 +1171,21 @@ export class SmartTableService extends SmartTableData {
     "birthdate": "1963-02-23",
     "phone": "894-204-3517",
     "ssn": "842-12-5226"
-  }];
+  }, {
+    "id": 1300,
+    "firstName": "Michael",
+    "lastName": "Johnson",
+    "email": "brak",
+    "gender": "Mężczyzna",
+    "address": "Ośrodek Totustus Sala nr 5",
+    "city": "Arkham",
+    "birthdate": "1970-04-30",
+    "phone": "698-790-434",
+    "ssn": "815-03-9998",
+    "photo": "nick8.png",
+    "print": "p4",
+    "info": "1999 - mandat za kradzież alkoholu z zamkniętego sklepu monopolowego"
+  },];
 
   getData() {
     return this.data;

@@ -1,1 +1,55 @@
-<p>fingerprint works!</p>
+<div *ngIf="vm$ | async as vm">
+    <div class="accordions-container row justify-content-md-center">
+        <div class="col-md-12 col-lg-6 col-xxxl-6">
+            <nb-card>
+                <nb-card-body class="toolbar">
+                    <label>Skalowanie</label>
+                    <input
+                        type="range"
+                        min="1"
+                        max="5"
+                        [(ngModel)]="value"
+                        (ngModelChange)="rangeChanged($event)"
+                    />
+                    <div>{{ value }}</div>
+                    <button nbButton (click)="scan()">Sprawdź</button>
+                </nb-card-body>
+            </nb-card>
+        </div>
+    </div>
+    <div class="accordions-container row justify-content-md-center">
+        <div class="accordion-container col-md-6 col-lg-3 col-xxxl-3">
+            <nb-card>
+                <nb-card-body>
+                    <div class="print">
+                        <div class="print-wrapper" *ngIf="vm.printAnimation && vm.printAnimationCurrentPrint != null">
+                            <img [src]="'assets/images/p' + vm.printAnimationCurrentPrint + '.png'">
+                        </div>
+                    </div>
+                </nb-card-body>
+            </nb-card>
+        </div>
+        <div class="accordion-container col-md-6 col-lg-3 col-xxxl-3">
+            <nb-card>
+                <nb-card-body class="print">
+                    <div class="print">
+                        <div class="print-wrapper" [style.height.px]="vm.scanHeight">
+                            <img [src]="'assets/images/p'+ vm.selectedPrint +'.png'">
+                        </div>
+                    </div>
+                </nb-card-body>
+            </nb-card>
+        </div>
+    </div>
+    <div class="accordions-container row justify-content-md-center" *ngIf="vm.printAnimation">
+        <div class="accordion-container col-md-12 col-lg-6 col-xxxl-6">
+            <nb-card>
+                <nb-card-body class="info">
+                    <div class="title" [class.found]="vm.found">{{ vm.found ? 'Znaleziono odcisk w bazie' : 'Szukanie' }}</div>
+                    <button nbButton (click)="show(vm.selectedPrint)" *ngIf="vm.found">Pokaż osobę</button>
+                </nb-card-body>
+            </nb-card>
+        </div>
+    </div>
+</div>
+

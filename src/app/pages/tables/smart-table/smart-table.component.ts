@@ -51,6 +51,6 @@ export class SmartTableComponent {
 
   rowSelected(event): void {
     console.log(event);
-    this.router.navigate([`pages/layout/accordion/${event.data.id}`])
+    this.router.navigate([`pages/layout/accordion/${event.data.id}`]);
   }
 }
