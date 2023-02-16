@@ -1091,7 +1091,7 @@ export class SmartTableService extends SmartTableData {
     "address": "Apt 1194",
     "city": "Shanhou",
     "birthdate": "1950-08-06",
-    "phone": "505-764-615",
+    "phone": "575-102-500",
     "ssn": "814-03-5088",
     "photo": "nick3.png",
     "print": "p5"
