@@ -1,0 +1,73 @@
+.title {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.toolbar {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+
+    button {
+        margin-left: auto;
+    }
+}
+
+.content {
+    padding: 20px 50px;
+}
+
+.middle {
+    text-align: center;
+}
+
+:host ::ng-deep .header .step .label {
+    width: 100px!important;
+
+    span {
+        display: block;
+        text-align: center;
+    }
+}
+
+nb-icon {
+    font-size: 74px;
+}
+
+.step-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+
+    button {
+        width: 200px;
+    }
+}
+
+.timer {
+    font-size: 80px;
+
+    &.animation {
+        animation-name: anim;
+        animation-iteration-count: infinite;
+    }
+
+    &.found {
+        color: green;
+    }
+}
+
+.button-disconnected {
+    margin-top: 20px;
+}
+
+@keyframes anim {
+    0%   { opacity: 1 }
+    50%  { opacity: 0 }
+    100% { opacity: 1 }
+}
+
+.map {
+    width: 100%;
+}

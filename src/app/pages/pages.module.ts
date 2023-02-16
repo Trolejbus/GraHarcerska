@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { NbButtonModule, NbCardModule, NbInputModule, NbMenuModule } from '@nebular/theme';
+import { NbButtonModule, NbCardModule, NbIconModule, NbInputModule, NbMenuModule, NbStepperModule } from '@nebular/theme';
 
 import { ThemeModule } from '../@theme/theme.module';
 import { PagesComponent } from './pages.component';
@@ -10,6 +10,7 @@ import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
 import { FingerprintComponent } from './fingerprint/fingerprint.component';
 import { PhonesComponent } from './phones/phones.component';
 import { FormsModule } from '@angular/forms';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 @NgModule({
   imports: [
@@ -22,7 +23,10 @@ import { FormsModule } from '@angular/forms';
     NbCardModule,
     NbInputModule,
     NbButtonModule,
+    NbIconModule,
     FormsModule,
+    NbStepperModule,
+    GoogleMapsModule,
   ],
   declarations: [
     PagesComponent,

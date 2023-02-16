@@ -1,1 +1,55 @@
-<p>phones works!</p>
+<div class="accordions-container row justify-content-md-center">
+    <div class="col-md-12 col-lg-6 col-xxxl-6">
+        <nb-card>
+            <nb-card-body class="content">
+                <nb-stepper #stepper orientation="horizontal" [disableStepNavigation]="true" (stepChange)="stepChanged($event)">
+                    <nb-step label="Podaj numer telefonu">
+                        <div class="step-content">
+                            <div class="title">Podaj numer telefonu, który chcesz namierzyć</div>
+                            <input nbInput [(ngModel)]="phoneNo" />
+                            <button nbButton (click)="find()">Namierz</button>
+                        </div>
+                    </nb-step>
+                    <nb-step label="Podłącz telefon">
+                        <div class="step-content">
+                            <div class="title">Podłącz telefon, który będzie użyty do namierzenia</div>
+                            <div><nb-icon icon="smartphone-outline"></nb-icon></div>
+                            <button nbButton nbStepperNext>Podłączony</button>
+                        </div>
+                    </nb-step>
+                    <nb-step label="Wykonaj połączenie">
+                        <div class="step-content">
+                            <div class="title middle">Wykonaj połączenie. Gdy osoba namierzana odbierze, kliknij przycisk "Zacznij namierzać" i utrzymaj cel przez 1 minutę na linii</div>
+                            <button nbButton nbStepperNext>Zacznij namierzać</button>
+                        </div>
+                    </nb-step>
+                    <nb-step label="Utrzymaj połączenie przez 1 min">
+                        <ng-container *ngIf="pending">
+                            <div class="step-content" *ngIf="anim$ | async as anim">
+                                <ng-container *ngIf="anim.found == null">
+                                    <div
+                                        class="timer"
+                                        [class.animation]="!anim.finish"
+                                        [class.found]="anim.finish"
+                                        [style.animation-duration.ms]="anim.animationDuration"
+                                    >
+                                        {{ anim.timer }}
+                                    </div>
+                                    <button nbButton status="success" class="button-disconnected" *ngIf="anim.finish" (click)="connected()">Pokaż na mapie</button>
+                                    <button nbButton status="danger" class="button-disconnected" (click)="disconnected()">Rozłączono</button>
+                                </ng-container>
+                                <ng-container *ngIf="anim.found === false">
+                                    <div class="title">Nie udało się namierzyć telefonu</div>
+                                    <button nbButton (click)="retry()">Spróbuj jeszcze raz</button>
+                                </ng-container>
+                                <ng-container *ngIf="anim.found === true">
+                                    <img src="assets/images/map.png" class="map">
+                                </ng-container>
+                            </div>
+                        </ng-container>
+                    </nb-step>
+                </nb-stepper>
+            </nb-card-body>
+        </nb-card>
+    </div>
+</div>
