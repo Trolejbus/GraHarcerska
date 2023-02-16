@@ -57,3 +57,8 @@
     50%  { opacity: 0 }
     100% { opacity: 1 }
 }
+
+.cache {
+    height: 0;
+    overflow: hidden;
+}
