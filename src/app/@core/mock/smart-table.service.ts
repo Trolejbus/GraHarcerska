@@ -1091,8 +1091,8 @@ export class SmartTableService extends SmartTableData {
     "address": "Apt 1194",
     "city": "Shanhou",
     "birthdate": "1950-08-06",
-    "phone": "575-102-500",
-    "ssn": "814-03-5088",
+    "phone": "509-708-344",
+    "ssn": "999-03-5088",
     "photo": "nick3.png",
     "print": "p5"
   }, {
@@ -1101,11 +1101,11 @@ export class SmartTableService extends SmartTableData {
     "lastName": "Long",
     "email": "brak",
     "gender": "Mężczyzna",
-    "address": "Ośrodek Totustus domek nr 7",
+    "address": "Grzybowska 22",
     "city": "Arkham",
     "birthdate": "1945-02-11",
     "phone": "216-954-2644",
-    "ssn": "814-03-5083",
+    "ssn": "999-03-5083",
     "photo": "nick4.png",
     "print": "p2",
     "info": "1970 - rozprawa przeciw Jake Long oraz Joel Simpson, uczestniczenie w zorganizowanej grupie przestępczej handlującej skradzionymi i podrobionymi dziełami sztuki. Uniewinnieni z powodu braku dowodów. Relacje świadków świadczą jednak, że jest to prawda, ale nie udało się znaleźć wystarczających powodów."
@@ -1115,11 +1115,11 @@ export class SmartTableService extends SmartTableData {
     "lastName": "Long",
     "email": "brak",
     "gender": "Mężczyzna",
-    "address": "Ośrodek Totustus Sala nr 5",
+    "address": "Katowicka 11/10",
     "city": "Arkham",
     "birthdate": "1970-03-14",
     "phone": "883-203-598",
-    "ssn": "123-03-5083",
+    "ssn": "999-03-5083",
     "photo": "nick5.png",
     "info": "1992 - 2000 - Udział w zorganizowanej organizacji przestępczej. 2000 - proces zakończony skazaniem na 5 lat więzienia z 5 letnim okresem warunkowym."
   }, {
@@ -1132,7 +1132,7 @@ export class SmartTableService extends SmartTableData {
     "city": "Shanhou",
     "birthdate": "1924-05-15",
     "phone": "539-922-404",
-    "ssn": "143-03-5083",
+    "ssn": "999-03-5083",
     "print": "p1",
     "photo": "nick6.png",
   }, {
@@ -1144,7 +1144,7 @@ export class SmartTableService extends SmartTableData {
     "address": "Ośrodek Totustus domek nr 7",
     "city": "Arkham",
     "birthdate": "1925-08-30",
-    "phone": "brak",
+    "phone": "696-782-403",
     "ssn": "999-03-5083",
     "print": "p3",
     "photo": "nick7.png",
@@ -1177,15 +1177,29 @@ export class SmartTableService extends SmartTableData {
     "lastName": "Johnson",
     "email": "brak",
     "gender": "Mężczyzna",
-    "address": "Ośrodek Totustus Sala nr 5",
+    "address": "Katowicka 11/10",
     "city": "Arkham",
     "birthdate": "1970-04-30",
     "phone": "698-790-434",
-    "ssn": "815-03-9998",
+    "ssn": "999-03-9998",
     "photo": "nick8.png",
     "print": "p4",
     "info": "1999 - mandat za kradzież alkoholu z zamkniętego sklepu monopolowego"
-  },];
+  }, {
+    "id": 1400,
+    "firstName": "John",
+    "lastName": "Potter",
+    "email": "brak",
+    "gender": "Mężczyzna",
+    "address": "brak",
+    "city": "Arkham",
+    "birthdate": "1960-09-30",
+    "phone": "794438727",
+    "ssn": "999-03-5999",
+    "photo": "nick2.png",
+  }
+
+];
 
   getData() {
     return this.data;
