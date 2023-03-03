@@ -1141,7 +1141,7 @@ export class SmartTableService extends SmartTableData {
     "lastName": "Hughes",
     "email": "brak",
     "gender": "Mężczyzna",
-    "address": "Ośrodek Totustus domek nr 7",
+    "address": "Grzybowska 22",
     "city": "Arkham",
     "birthdate": "1925-08-30",
     "phone": "696-782-403",
