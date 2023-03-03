@@ -31,7 +31,7 @@ export class PhonesComponent {
       found,
       timer: this.format(anim),
       animationDuration: (- 0.025 * (anim / 1000) + 2) * 1000,
-      finish: anim >= 5 * 1000,
+      finish: anim >= 60 * 1000,
     })),
   );
 
